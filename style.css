@@ -1,0 +1,1000 @@
+@font-face {
+    font-family:"Aretha" ;
+    src: url("fonts/Aretha\ Bridge.ttf");
+}
+@font-face {
+    font-family:"Avenir" ;
+    src: url("fonts/AvenirNextLTPro-Regular.otf");
+}
+
+:root{
+    --primary-color: #3E065F;
+    --second-color: #000000;
+    --third-color:#700B97;
+    --four-color:#8E05C2;
+}
+#counter{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items: center;
+    width:10%;
+    color:white;
+    z-index: 1;
+    font-size: 20px;
+    font-family: "Aretha";
+    position: absolute;
+}
+#counter #boton_left, 
+#counter #boton_right{
+    cursor: pointer;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    
+}
+/** Portada **/
+#all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-image: url("images/Fondo.jpg");
+    z-index: 0;
+    background-size: 100% 100%;
+    position:relative;
+    height:100%;
+    width:100%;
+    transition:all 1s ease-out;
+
+}
+#fondo{
+    height:100%;
+    width:100%;
+    position: absolute;
+    z-index: -1;
+    background: var(--primary-color) ;
+    opacity: 0.9;
+}
+#titulo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    color:white;
+    font-family:"Aretha" ;
+
+}
+#titulo h1{
+    margin: 0;
+    font-size: 100px;
+    letter-spacing: 10px;
+}
+#titulo h4{
+    margin: 0;
+    font-family:"Avenir" ;
+
+    font-size:20px;
+    letter-spacing: 15px;
+}
+#stars{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 20%;
+    margin-top: 1%;
+    font-size: 15px;
+    color:white;
+}
+button{
+    height:5%;
+    width:10%;
+    border: 1px solid white;
+    background: linear-gradient(var(--four-color), var(--primary-color)) ;
+    color:white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(36, 8, 53);
+    position:absolute;
+    bottom: 30%;
+    transition: all 0.25s ease-in;
+    transition-delay: 0s;
+    font-family:"Avenir" ;
+    letter-spacing: 2.5px;
+    font-size: 16px;
+    
+}
+button:hover{
+    bottom:31%;
+    background: linear-gradient(rgb(67, 0, 115), rgb(32, 1, 50)) ;
+
+}
+/** Introduccion **/
+#intro{
+    width:100%; 
+    height:100vh;
+    margin: 0;
+    padding: 0;
+    display:none;
+    flex-direction: row;
+}
+#parte1{
+    width:calc(100%/3);
+    background-color: var(--second-color);
+    height: 100%;
+}#parte2{
+    width:calc(100%/3 * 2);
+    background-image: url("images/Intro.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    position:relative;
+    z-index: 0;
+}
+.intro_fondo{
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    background:var(--primary-color);
+    opacity:0.5 ;
+}
+#parte1 h1{
+    margin: 0;
+    padding: 0;
+    
+}
+#text-int{
+    width:100%;
+    height:35%;
+    margin: 0;
+    background-color: var(--third-color);
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    font-family:"Aretha" ;
+    font-size: 25px;
+    letter-spacing:5px;
+    border:none;
+}
+.triangulo-equilatero-bottom {
+    width: 0;
+    height: 0;
+    border-right: calc(50vw/3 - 5px) solid transparent;
+    border-top: 100px solid transparent;
+    border-left: calc(50vw/3) solid transparent;
+    border-bottom: 50px solid var(--third-color);
+    transform: rotate(180deg);
+    border-radius: 0px;
+    margin: 0;
+}
+#nombres{
+    height:calc(65% - 175px);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+#nombres p{
+    font-size: 20px;
+    color: white;
+    font-family: "Avenir";
+}
+#intro_title{
+    height:20%;
+    width:80%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 32px;
+    font-family: "Aretha";
+    letter-spacing:5px;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border:solid;
+    border-image-slice: 0.2;
+    border-width: 5px;
+    border-image-source:
+    linear-gradient(60deg, #8A2EFF, #CCE0FF);   
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 20px;
+}
+#intro_text{
+    height:60%;
+    width:80%;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+#intro_text p{
+    margin-left: 10%;
+    margin-right: 10%;
+    color: rgb(255, 255, 255);
+    display: flex; 
+    font-size: 30px;
+    font-family: "Avenir";
+}
+/** Desarollo **/
+
+#desarrollo{
+    height:100vh;
+    width:100%;
+    display: none;
+    flex-direction:column;
+    align-items: center;
+    background-image: url("images/Desarrollo.jpg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+#desarrollo .intro_fondo{
+    opacity: 0.8;
+}
+#des-title{
+    cursor:pointer;
+    height:15%;
+    width: 80%;
+    font-size: 40px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top: 5%;
+}
+#des-title h1{
+    margin:0;
+    padding: 0;
+}
+#des-text{
+    width: 40%;
+    height:40%;
+    font-size: 25px;
+    font-family: "Avenir";
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top: 2.5%;
+    color:white;
+    display: none;
+}
+#des-title2{
+    cursor: pointer;
+    height:15%;
+    width: 80%;
+    font-size: 40px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top: 5%;
+}
+#des-text2{
+    color:white;
+    width: 40%;
+    height:40%;
+    font-size: 25px;
+    font-family: "Avenir";
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top: 2.5%;
+    display: none;
+}
+/** Autores ***/
+#autores{
+    width:100%;
+    height:100%;
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    background-image: url("images/Autores.jpg");
+    position:relative;
+    z-index: 0;
+}
+#autores .intro_fondo{
+    opacity: 0.8;
+}
+#autores h1{
+    font-family: "Aretha";
+    letter-spacing:5px;
+    font-size: 40px;
+}
+.fila{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content:space-around;
+    overflow: hidden;
+    width:100%;
+}
+h1{
+    margin: 0;
+}
+
+.front-face{
+    backface-visibility: hidden;
+    transition:transform .7s cubic-bezier(.4, .2, .2, 1);
+    position:absolute;
+    border-radius: 20px;
+}
+.img{
+    width:325px;
+    height:325px;
+    border-radius: 20px;
+
+}
+.columna{
+    position:relative;
+    width:325px;
+    height:325px;
+    display:flex;
+    margin-top: 5%;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    perspective: 1000px;
+}
+.backface{
+    position: relative;
+    width:325px;
+    height:325px;
+    backface-visibility: hidden;
+    transition:transform .7s cubic-bezier(.4, .2, .2, 1);
+    transform:rotateY(180deg);
+    border-radius: 20px;
+    color: white;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.backface h3{
+    font-size: 30px;
+    letter-spacing:5px;
+    font-family: "Aretha";
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.backface p{
+    font-size: 16px;
+    font-family: "Avenir";
+    width:80%;
+}
+.b-fondo{
+    left:0;
+    top: 0;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--second-color);
+    opacity: 0.9;
+    border-radius: 20px;
+    z-index: -1;
+
+}
+.columna:hover > .backface{
+    transform:rotateY(0deg);
+}
+.columna:hover > .front-face{
+    transform:rotateY(-180deg);
+}
+/** Obras **/
+#obras{
+    height:100%;
+    width:100%;
+    background-image: url("https://i.ytimg.com/vi/n1ZJGZPfHu0/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 0;
+    position:relative;
+    display:none;
+    flex-direction:column;
+}
+.O-bg{
+    height:100%;
+    width:100%;
+    background: radial-gradient(var(--primary-color),rgb(27, 27, 27));
+    position:absolute;
+    z-index: -1;
+    opacity: 0.8;
+}
+#o-title{
+    height:20%;
+    font-family: "Aretha";
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    letter-spacing: 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    width:80%;
+    margin-left: 10%;
+    font-size:30px;
+    color: white;
+}
+#obr-text{
+    font-family: "Avenir";
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+#obras_body{
+    height:60%;
+    width:80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-image: url("https://media.admagazine.com/photos/618a67eb532cae908aaf2d62/master/w_1600%2Cc_limit/63440.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    overflow:hidden;
+    position:relative;
+    z-index: 0;
+}
+#buton-p-right, #buton-p-left{
+    height:100%;
+    width: 15%;
+    color:white;
+    font-family: "Aretha";
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}#buton-p-right img, #buton-p-left img{
+    width:150px;
+    height:150px;
+    cursor: pointer;
+}
+#buton-p-right img{
+    transform:rotateY(180deg)
+}
+/*
+caracteristicas
+*/
+#caracteristicas{
+    height:100%;
+    width:100%;
+    background-image: url("images/Caracteristicas.jpg");
+    position:relative;
+    z-index: 0;
+    display: none;
+    flex-direction:column;
+}
+.intro_ca{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#ca-titulo{
+    height:20%;
+    font-family: "Aretha";
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    letter-spacing: 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    width:80%;
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+#all-ca{
+    height:70%;
+    width:80%;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top:2.5%;
+    margin-left: 10%;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.ca{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    border-radius: 20px;
+    height:80%
+}
+.ca p{
+    font-size:25px;
+    font-family: "Avenir";
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.p-img{
+    height:20px;
+    width:20px;
+   transform:rotateZ(270deg);
+
+}
+/** desarrollo absurdo */
+
+#desarrollo_absurdo{
+    height:100vh;
+    width:100%;
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    background:url("https://upload.wikimedia.org/wikipedia/commons/0/0f/SMSU_Thtr.jpg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+.intro_fondo{
+    opacity: 0.8;
+}
+#des-absurdo-title{
+    cursor:pointer;
+    height:15%;
+    width: 80%;
+    font-size: 40px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top: 5%;
+}
+#des-absurdo-title h1{
+    margin:0;
+    padding: 0;
+}
+#des-absurdo-text{
+    width: 40%;
+    height:40%;
+    font-size: 25px;
+    font-family: "Avenir";
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top: 2.5%;
+    color:white;
+    display:none;
+}
+#des-absurdo-title2{
+    cursor: pointer;
+    height:15%;
+    width: 80%;
+    font-size: 40px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top: 5%;
+}
+#des-absurdo-text2{
+    color:white;
+    width: 40%;
+    height:40%;
+    font-size: 25px;
+    font-family: "Avenir";
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top: 2.5%;
+    display:none;
+}
+
+/** Autores teatro del absurdo**/
+#autores-absurdo{
+    width:100%;
+    height:100%;
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    background-image: url("images/Autores.jpg");
+    position:relative;
+    z-index: 0;
+}
+#autores-absurdo .intro_fondo{
+    background-color: var(--primary-color);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: -1;
+}
+#autores-absurdo h1{
+    font-family: "Aretha";
+    letter-spacing:5px;
+    font-size: 40px;
+}
+.fila-absurdo{
+    display:grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content:space-around;
+    overflow: hidden;
+    width:100%;
+}
+h1{
+    margin: 0;
+}
+
+.front-face-absurdo{
+    backface-visibility: hidden;
+    transition:transform .7s cubic-bezier(.4, .2, .2, 1);
+    position:absolute;
+    border-radius: 20px;
+}
+.img{
+    width:325px;
+    height:325px;
+    border-radius: 20px;
+
+}
+.columna-absurdo{
+    position:relative;
+    width:325px;
+    height:325px;
+    display:flex;
+    margin-top: 5%;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    perspective: 1000px;
+}
+.backface-absurdo{
+    position: relative;
+    width:325px;
+    height:325px;
+    backface-visibility: hidden;
+    transition:transform .7s cubic-bezier(.4, .2, .2, 1);
+    transform:rotateX(180deg);
+    border-radius: 20px;
+    color: white;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.backface-absurdo h3{
+    font-size: 30px;
+    letter-spacing:5px;
+    font-family: "Aretha";
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.backface-absurdo p{
+    font-size: 16px;
+    font-family: "Avenir";
+    width:80%;
+}
+.b-fondo{
+    left:0;
+    top: 0;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--second-color);
+    opacity: 0.9;
+    border-radius: 20px;
+    z-index: -1;
+
+}
+.columna-absurdo:hover > .backface-absurdo{
+    transform:rotateY(0deg);
+}
+.columna-absurdo:hover > .front-face-absurdo{
+    transform:rotateY(-180deg);
+}
+/** Caracteristicas **/
+#caracteristicas-absurdo{
+    height:100%;
+    width:100%;
+    background-image: url("images/Caracteristicas.jpg");
+    position:relative;
+    z-index: 0;
+    display:none;
+    flex-direction:column;
+}
+.intro_ca-absurdo{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#ca-titulo-absurdo{
+    height:20%;
+    font-family: "Aretha";
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    letter-spacing: 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    width:80%;
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+#all-ca-absurdo{
+    height:70%;
+    width:80%;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    margin-top:2.5%;
+    margin-left: 10%;
+    display:grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+.ca-absurdo{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    border-radius: 20px;
+    height:80%
+}
+.ca-absurdo p{
+    font-size:25px;
+    font-family: "Avenir";
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.p-img{
+    height:20px;
+    width:20px;
+   transform:rotateZ(270deg);
+
+}
+/** Obras absurdo**/
+#obras-absurdo{
+    height:100%;
+    width:100%;
+    background-image: url("https://i.ytimg.com/vi/n1ZJGZPfHu0/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 0;
+    position:relative;
+    display:none;
+    flex-direction:column;
+}
+.O-bg{
+    height:100%;
+    width:100%;
+    background: radial-gradient(var(--primary-color),rgb(27, 27, 27));
+    position:absolute;
+    z-index: -1;
+    opacity: 0.8;
+}
+#o-title-absurdo{
+    height:20%;
+    font-family: "Aretha";
+    background:linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.2) 75%,
+    rgba(255,255,255,0) 100%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1),
+    inset 0 0 1px rgba(255,255,255,0.6);
+    border-radius: 20px;
+    letter-spacing: 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    width:80%;
+    margin-left: 10%;
+    font-size:30px;
+    color: white;
+}
+#obr-text-absurdo{
+    height:100%;
+    font-family: "Avenir";
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+#obras_body-absurdo{
+    height:60%;
+    width:80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    overflow:hidden;
+    position:relative;
+    z-index: 0;
+}
+#buton-p-right-absurdo, #buton-p-left-absurdo{
+    height:100%;
+    width: 15%;
+    color:white;
+    font-family: "Aretha";
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}#buton-p-right-absurdo img, #buton-p-left-absurdo img{
+    width:150px;
+    height:150px;
+    cursor: pointer;
+}
+#buton-p-right-absurdo img{
+    transform:rotateY(180deg)
+}
+/**
+Conclusion 
+**/
+#conclusion{
+    width:100%;
+    height:100%;
+    background-image: url("https://i.pinimg.com/originals/cf/49/8a/cf498ae05d1996f60571425a28251f2c.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display:none;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    position:relative;
+    z-index: 0;
+}
+#conclusion h1{
+    font-family: "Aretha";
+    font-size: 100px;
+    color: white;
+    border:1px solid linear-gradient(90deg, cyan , red);
+    border-radius: 20px;
+    padding: 5px;
+}
+#con-bg{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: -1;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+}
+#total_page{
+    letter-spacing:5px;
+}
